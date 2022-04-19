@@ -11,10 +11,10 @@ import Select from '@mui/material/Select';
 
 
 function SearchBar() {
-  const [age, setAge] = React.useState('');
+  const [filter, setFilter] = React.useState('');
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setFilter(event.target.value);
   };
 
   return (
@@ -25,16 +25,15 @@ function SearchBar() {
             <Select
             labelId="demo-simple-select-helper-label"
             id="demo-simple-select-helper"
-            value={age}
-            label="Age"
+            value={filter}
+            label="Search By"
             onChange={handleChange}
             >
             <MenuItem value="">
                 <em>None</em>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={10}>Video</MenuItem>
+            <MenuItem value={20}>AgentID</MenuItem>
             </Select>
             </FormControl>
             <FormControl sx={{ m: 1, minWidth: '10vw' }}>
@@ -42,16 +41,17 @@ function SearchBar() {
             <Select
             labelId="demo-simple-select-helper-label"
             id="demo-simple-select-helper"
-            value={age}
-            label="Age"
+            value={filter}
+            label="Value"
             onChange={handleChange}
             >
             <MenuItem value="">
                 <em>None</em>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={10}>5</MenuItem>
+            <MenuItem value={20}>4</MenuItem>
+            <MenuItem value={30}>3</MenuItem>
+            <MenuItem value={40}>Less than 4</MenuItem>
             </Select>
             </FormControl>
             <FormControl sx={{ m: 1, minWidth: '10vw'}}>
@@ -59,16 +59,16 @@ function SearchBar() {
             <Select
             labelId="demo-simple-select-helper-label"
             id="demo-simple-select-helper"
-            value={age}
-            label="Age"
+            value={filter}
+            label="Tags"
             onChange={handleChange}
             >
             <MenuItem value="">
                 <em>None</em>
             </MenuItem>
-            <MenuItem value={10}>Ten</MenuItem>
-            <MenuItem value={20}>Twenty</MenuItem>
-            <MenuItem value={30}>Thirty</MenuItem>
+            <MenuItem value={10}>Good</MenuItem>
+            <MenuItem value={20}>TroubleShooting</MenuItem>
+            <MenuItem value={30}>Fast</MenuItem>
             </Select>
             </FormControl>
         </div>

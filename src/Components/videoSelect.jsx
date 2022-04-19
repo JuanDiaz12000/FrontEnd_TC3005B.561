@@ -9,30 +9,31 @@ import VideoCard from './videoCard';
 
 function VideoSelect(){
 
-    const [age, setAge] = React.useState('');
+    const [order, setOrder] = React.useState('');
 
     const handleChange = (event) => {
-      setAge(event.target.value);
+        setOrder(event.target.value);
     };
 
     return(
         <div className="mainVideoSelect">
             <div className="Selector">
                 <FormControl sx={{ m: 1, minWidth: '10vw', backgroundColor:'#fafafa'}}>
-                    <InputLabel id="demo-simple-select-helper-label" style={{display: 'flex', flexDirection: 'row', alignItems: 'center',flexWrap: 'wrap'}}> <SortIcon style={{fontSize: '2vh', marginRight: '0.5vw'}}/>Search By</InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label" style={{display: 'flex', flexDirection: 'row', alignItems: 'center',flexWrap: 'wrap'}}> <SortIcon style={{fontSize: '2vh', marginRight: '0.5vw'}}/>Order By</InputLabel>
                     <Select
                     labelId="demo-simple-select-helper-label"
                     id="demo-simple-select-helper"
-                    value={age}
-                    label="Age"
+                    value={order}
+                    label="Order"
                     onChange={handleChange}
                     >
                         <MenuItem value="">
-                            <em>None</em>
+                            <em>Default</em>
                         </MenuItem>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
-                        <MenuItem value={30}>Thirty</MenuItem>
+                        <MenuItem value={10}>Most Recent</MenuItem>
+                        <MenuItem value={20}>Oldest</MenuItem>
+                        <MenuItem value={30}>Longest</MenuItem>
+                        <MenuItem value={40}>Shortest</MenuItem>
                     </Select>
                 </FormControl>
             </div>
