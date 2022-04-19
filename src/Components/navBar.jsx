@@ -1,7 +1,7 @@
 import React from "react";
 import "./Style/navBar.scss"
-import { Avatar } from "@mui/material";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Button from "@mui/material/Button";
 function NavBar(props){
     return(
         <div className="navBar">
