@@ -6,6 +6,8 @@ import Button from '@mui/material/Button';
 import PlayArrowIcon from '@mui/icons-material/PlayArrow'; 
 import './Style/recordingScreen.scss'
 
+//Código de Cronómetro: https://www.geeksforgeeks.org/create-a-stop-watch-using-reactjs/
+
 function RecordingScreenDialog(){
     const [isActive, setIsActive] = React.useState(false);
     const [isPaused, setIsPaused] = React.useState(true);
